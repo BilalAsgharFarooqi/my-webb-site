@@ -1,9 +1,18 @@
+function  add(){
+var box1 = document.getElementById("box1"); 
+var box2 = document.getElementById("box2");
+ var box3 = document.getElementById("box3");
+
+var result = Number(box1.value) + Number(box2.value) + Number(box3.value); 
+box3.innerHTML = result;
+document.write(result);
+}
 // A recursive javascript program to check whether a given number is palindrome or not
 
 // A function that returns true only if num contains one unique digit less than 10 digits
 function oneDigit(num) {
 
-		if ((num >= 0) && (num < 11111111111))
+		if ((num >= 0) && (num < 9999999999))
 			return 1;
 		else
 			return 0;
