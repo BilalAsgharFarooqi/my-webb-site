@@ -1,18 +1,15 @@
-// A recursive javascript program to
-// check whether a given number
-// is palindrome or not
+// A recursive javascript program to check whether a given number is palindrome or not
 
-	// A function that returns true
-	// only if num contains one digit
-	function oneDigit(num) {
+// A function that returns true only if num contains one unique digit less than 10 digits
+function oneDigit(num) {
 
-		if ((num >= 0) && (num < 10))
+		if ((num >= 0) && (num < 11111111111))
 			return 1;
 		else
 			return 0;
-	}
-
-	function isPalUtil
+}
+    
+function isPalUtil
 	(num , dupNum) {
 
 		// base condition to return once we
@@ -40,10 +37,9 @@
 
 	}
 
-	function isPal(num)
+function isPal(num)
 	{
-
-		if (num < 0)
+		if (num < 0 )
 			num = (-num);
 
 		var dupNum = (num);
@@ -61,12 +57,13 @@
 	try {
 		isPal(n);
 		document.write("<br>Yes");
-	} catch (e) {
+	} 
+	catch (e) {
 		document.write("<br>No");
 		}
 
 		n = 12;
-		try {
+	try {
 			isPal(n);
 			document.write("<br>Yes");
 	} catch (e) {
@@ -74,20 +71,27 @@
 		}
 
 		n = 88;
-		try {
-			isPal(n);
-			document.write("<br>Yes");
-	} catch (e) {
-		document.write("<br>No");
-		}
-
-		n = 8999;
-		try {
+	try {
 			isPal(n);
 			document.write("<br>Yes");
 	} catch (e) {
 		document.write("<br>No");
 	}
+	n = 9999999999;
+	try {
+		isPal(n);
+		document.write("<br>Yes");
+}   catch (e) {
+	document.write("<br>No");
+}
+	n = 11111111111;
+	try {
+		isPal(n);
+		document.write("<br>Yes");
+}   catch (e) {
+	document.write("<br>No");
+}
+
 
 
 
